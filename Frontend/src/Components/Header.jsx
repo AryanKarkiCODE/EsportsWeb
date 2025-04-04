@@ -67,20 +67,23 @@ const Header = () => {
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center text-white">
         {/* Logo */}
-        <div
-          className="font-bold text-center mb-1 relative cursor-pointer"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div className="flex items-center">
-            <div className="font-esports text-3xl font-bold">
-              <span className="text-semored">SE</span>
-              <span className="text-white">MO</span>
-            </div>
-            <span className="ml-2 text-xs font-bold tracking-wider bg-semored px-2 py-0.5 rounded-sm">ESPORTS</span>
-          </div>
+        <div className="flex items-center space-x-4 ml-4">
+        <img
+    src="/images/semo logo.png"
+    alt="Semo Logo"
+    className="w-20 h-20 object-contain transition-transform duration-500 hover:scale-110 hover:rotate-3 hover:drop-shadow-[0_0_20px_rgba(255,0,0,0.6)]"
+  />
+  <div className="font-esports text-4xl font-bold italic flex items-center space-x-2">
+    <span className="text-semored drop-shadow-[2px_2px_0_rgba(0,0,0,0.6)] hover:scale-110 hover:-skew-x-6 transition-transform duration-300 ease-in-out">
+      GO
+    </span>
+    <span className="text-white drop-shadow-[2px_2px_0_rgba(255,0,0,0.5)] hover:scale-105 hover:skew-x-6 transition-transform duration-300 ease-in-out">
+      REDHAWKS
+    </span>
+  </div>
 
-          {/* Dropdown */}
+
+     {/* Dropdown */}
           <div
             className={`absolute top-full left-0 min-w-[700px] glassmorphism text-white p-6 rounded-lg transition-all duration-300 ease-out ${
               isDropdownOpen ? "scale-100 opacity-100" : "scale-95 opacity-0 pointer-events-none"
@@ -260,3 +263,4 @@ const Header = () => {
 }
 
 export default Header
+
